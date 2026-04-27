@@ -1,4 +1,4 @@
-# Q2-Web-Programming-Solved
+# Q2-Web-Programming-Solved by Mohaiminul
 A clean and responsive Job Portal UI clone built with HTML and CSS, featuring filtered job listings, customized tags, and a modern professional layout.
 # UIU CareerHub - Job Portal UI
 
