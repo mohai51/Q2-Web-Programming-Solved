@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-2</title>
+    <style>
+        * {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #d6d8da;
+            padding-bottom: 50px;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 30px;
+            color: rgb(0, 0, 0);
+            font-weight: 800;
+            ;
+        }
+
+        .logo a {
+            color: #9bb7dc;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .navdiv ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        li a {
+            color: rgb(0, 0, 0);
+            font-size: 14px;
+            padding: 3px;
+            white-space: nowrap;
+        }
+
+        .btn {
+            background-color: #205bcb;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            width: 100px;
+            height: 25px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .filter-group {
+            margin: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #444;
+        }
+
+        summary::after {
+            content: '▼';
+            font-size: 10px;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .options {
+            padding: 10px 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .options label {
+            font-size: 14px;
+            color: #666;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .options input[type="checkbox"] {
+            cursor: pointer;
+            accent-color: #007bff;
+            /* Checkbox color */
+        }
+
+        .options label:hover {
+            color: #007bff;
+        }
+
+        .btn1 {
+            background-color: #205bcb;
+            border-radius: 6px;
+            padding: 5px;
+            width: 200px;
+            color: white;
+            font-weight: bold;
+            border: none;
+        }
+
+        .main-wrapper {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            align-items: flex-start;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .left-content {
+            margin-top: 20px;
+            border-left: 6px solid black;
+            border-radius: 12px;
+            padding: 10px;
+            width: 600px;
+        }
+
+        .btn2 {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            font-size: 12px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">UIU Career<a>HUB</a> </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Internships</a></li>
+                <li><a href="#">Companies</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><button class="btn">+Post a Job</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <div class="sidebar">
+            <h3>Filters</h3>
+            <details class="filter-group">
+                <summary>Job Type</summary>
+                <div class="options">
+                    <label><input type="checkbox"> Full Time</label>
+                    <label><input type="checkbox"> Part Time</label>
+                    <label><input type="checkbox"> Internship</label>
+                    <label><input type="checkbox"> Remote</label>
+                </div>
+            </details>
+            <details class="filter-group">
+                <summary>Department</summary>
+                <div class="options">
+                    <label><input type="checkbox"> Software Engineering</label>
+                    <label><input type="checkbox"> Data Science</label>
+                    <label><input type="checkbox"> UI/UX Design</label>
+                    <label><input type="checkbox"> Networking</label>
+                </div>
+            </details>
+            <details class="filter-group">
+                <summary>Experience</summary>
+                <div class="options">
+                    <label><input type="checkbox"> Entry Level</label>
+                    <label><input type="checkbox"> Intermediate</label>
+                    <label><input type="checkbox"> Senior</label>
+                </div>
+            </details>
+            <button class="btn1">Apply Filters</button>
+        </div>
+
+        <div class="main">
+            <div class="heading">
+                <div>
+                    <h3>Available Positions</h3>
+                </div>
+                <div>
+                    <h7>Showing 3 of 23 jobs</h7>
+                </div>
+            </div>
+            <div class="parent-content" , style="display: flex;justify-content: space-between;">
+                <div class="left-content">
+                    <h3>Junior Software Engineer</h3>
+                    <h7>Kaz Software</h7>
+                    <div class="btn2">
+                        <div
+                            style="background-color:#e2ebfa; padding: 3px;border: 0.5px solid black; border-radius: 5px;">
+                            Full Time</div>
+                        <div
+                            style="background-color:#d6f2e7;padding: 3px;border: 0.5px solid black; border-radius: 5px;">
+                            Onsite-Dhaka</div>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <h3>$35,000-50,000</h3>
+                    <h7>Deadline: Dec 30, 2025</h7>
+                    <div style="margin-top: 10px;">
+                        <button
+                            style="background-color: #205bcb; padding: 5px;width: 100px;border: none;border-radius: 5px;color: white;font-weight: bold;">Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parent-content" , style="display: flex;justify-content: space-between;">
+                <div class="left-content">
+                    <h3>Data Analyst Intern</h3>
+                    <h7>bKash Limited</h7>
+                    <div class="btn2">
+                        <div
+                            style="background-color:#fdebc0; padding: 3px;border: 0.5px solid black; border-radius: 5px;">
+                            Internship</div>
+                        <div
+                            style="background-color:#d6f2e7;padding: 3px;border: 0.5px solid black; border-radius: 5px;">
+                            Onsite-Dhaka</div>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <h3>$15,000/month</h3>
+                    <h7>Deadline: Jan 15,2020</h7>
+                    <div style="margin-top: 10px;">
+                        <button
+                            style="background-color: #205bcb; padding: 5px;width: 100px;border: none;border-radius: 5px;color:
+                             white;font-weight: bold;">Apply</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="parent-content" , style="display: flex;justify-content: space-between;">
+                <div class="left-content">
+                    <h3>Frontend Developer</h3>
+                    <h7>Palhau Inc.</h7>
+                    <div class="btn2">
+                        <div
+                            style="background-color:#e2ebfa; padding: 3px;border: 0.5px solid black; border-radius: 5px;">
+                            Full Time</div>
+                        <div
+                            style="background-color:#d6f2e7;padding: 3px;border: 0.5px solid black; border-radius: 5px;">
+                            Onsite-Dhaka</div>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <h3>$45,000-70,000</h3>
+                    <h7>Deadline: Jan 5, 2025</h7>
+                    <div style="margin-top: 10px;">
+                        <button
+                            style="background-color: #205bcb; padding: 5px;width: 100px;border: none;border-radius: 5px;color: white;font-weight: bold;">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
